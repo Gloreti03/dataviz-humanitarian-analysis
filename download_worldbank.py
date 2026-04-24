@@ -26,8 +26,8 @@ for code, name in INDICATORS.items():
 result = pd.concat(frames, axis=1).reset_index()
 result = result.sort_values(["country_code", "year"]).reset_index(drop=True)
 
-result.to_csv("worldbank_macro.csv", index=False)
+result.to_csv("data/worldbank_macro.csv", index=False)
 
-print(f"Saved {len(result)} rows to worldbank_macro.csv")
+print(f"Saved {len(result)} rows to data/worldbank_macro.csv")
 print(result.head(10).to_string())
 print(f"\nMissing values:\n{result[list(INDICATORS.values())].isna().sum()}")

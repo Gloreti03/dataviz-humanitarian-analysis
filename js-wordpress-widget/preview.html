@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Story Card — Born Displaced (preview)</title>
+  <link rel="stylesheet" href="country-story-card.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 50px 16px 60px;
+      background: radial-gradient(ellipse at top, #1a2842 0%, #0a1320 70%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .preview-note {
+      font-family: monospace;
+      font-size: 11.5px;
+      color: #6f8398;
+      text-align: center;
+      margin-bottom: 32px;
+      line-height: 1.7;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 12px 20px;
+      border-radius: 8px;
+      max-width: 720px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .preview-note strong { color: #b8c5d6; }
+    .preview-note code   { color: #ffab91; }
+    #born-displaced-widget { width: 100%; max-width: 720px; }
+  </style>
+</head>
+<body>
+
+  <div class="preview-note">
+    <strong>Local preview</strong><br>
+    Run <code>python -m http.server</code> from <code>js-wordpress-widget/</code>,
+    open <code>http://localhost:8000/preview.html</code>
+  </div>
+
+  <!-- ── Widget markup ── -->
+  <div id="born-displaced-widget">
+
+    <label class="bd-label" for="bd-country-select">Explore a country</label>
+    <select id="bd-country-select">
+      <option value="" disabled selected>Loading countries…</option>
+    </select>
+
+    <div id="bd-card">
+      <div class="bd-header">
+        <div class="bd-title-wrap">
+          <span id="bd-flag"></span>
+          <h3 id="bd-country-name"></h3>
+        </div>
+        <span id="bd-crisis-badge"></span>
+      </div>
+
+      <div class="bd-body">
+        <div class="bd-chart-section">
+          <div class="bd-chart-wrap">
+            <canvas id="bd-mortality-chart"></canvas>
+          </div>
+          <p id="bd-insight" class="bd-insight"></p>
+        </div>
+
+        <div class="bd-metrics-section">
+          <div class="bd-metric-block">
+            <span class="bd-section-label">Peak displacement</span>
+            <div class="bd-bar-track">
+              <div id="bd-disp-bar" class="bd-bar-fill" style="width:0%"></div>
+            </div>
+            <span id="bd-disp-value" class="bd-disp-value"></span>
+          </div>
+
+          <div class="bd-info-grid">
+            <div class="bd-info-tile">
+              <span class="bd-info-tile-label">Latest mortality (1–4)</span>
+              <span id="bd-mortality-value" class="bd-info-tile-value">—</span>
+            </div>
+            <div class="bd-info-tile">
+              <span class="bd-info-tile-label">GDP per capita</span>
+              <span id="bd-gdp-value" class="bd-info-tile-value">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="bd-footnote">
+        Sources: UNICEF CME · UNHCR · World Bank · 2010–2022
+      </p>
+    </div>
+
+  </div>
+  <!-- ── end widget ── -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="country-story-card.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+country_name,avg_displaced,avg_mortality,avg_crisis_index,region
+Syrian Arab Republic,13433003.75,4.91,0.50,Middle East & North Africa
+Central African Republic,1338889.25,100.08,0.30,Sub-Saharan Africa
+Colombia,7701280.25,2.57,0.28,Latin America & Caribbean
+Democratic Republic of the Congo,6304746.75,19.23,0.27,Sub-Saharan Africa
+Afghanistan,6723892.75,8.66,0.26,South Asia
+Somalia,3763762.00,28.30,0.21,Sub-Saharan Africa
+South Sudan,3965013.75,21.57,0.20,Sub-Saharan Africa
+Yemen,4180717.50,9.38,0.17,Middle East & North Africa
+Nigeria,3238312.00,22.38,0.17,Sub-Saharan Africa
+Sudan,3628995.00,7.46,0.15,Sub-Saharan Africa
+Ethiopia,2976925.75,11.82,0.14,Sub-Saharan Africa
+Ukraine,3535480.50,1.94,0.13,Europe & Central Asia
+Niger,361463.00,31.79,0.09,Sub-Saharan Africa
+Cameroon,1102984.00,20.27,0.09,Sub-Saharan Africa
+Myanmar,1909737.25,4.53,0.08,East Asia & Pacific
+Iraq,1838565.50,5.27,0.08,Middle East & North Africa
+Burkina Faso,1306549.50,9.15,0.07,Sub-Saharan Africa
+Chad,393280.67,22.02,0.07,Sub-Saharan Africa
+Mali,516567.75,20.09,0.07,Sub-Saharan Africa
+Burundi,423193.75,19.13,0.06,Sub-Saharan Africa
+Mozambique,822660.00,9.48,0.05,Sub-Saharan Africa
+Venezuela (Bolivarian Republic of),1112988.25,3.26,0.05,Latin America & Caribbean
+Zimbabwe,296222.00,11.07,0.04,Sub-Saharan Africa
+Eritrea,587636.00,6.50,0.04,Sub-Saharan Africa
+Azerbaijan,710020.50,3.05,0.03,Europe & Central Asia
+Rwanda,266937.50,8.16,0.03,Sub-Saharan Africa
+Honduras,450705.75,4.96,0.03,Latin America & Caribbean
+Pakistan,295279.00,6.74,0.03,South Asia
+Mexico,406481.00,2.87,0.02,Latin America & Caribbean
+El Salvador,277841.00,4.67,0.02,Latin America & Caribbean
+Libya,339415.50,3.06,0.02,Middle East & North Africa
+Viet Nam,326262.00,2.88,0.02,Other
+Nicaragua,293808.00,3.21,0.02,Latin America & Caribbean
+Georgia,319173.50,1.91,0.02,Europe & Central Asia
+China,291703.25,1.86,0.01,East Asia & Pacific
+Serbia,253410.00,1.22,0.01,Europe & Central Asia

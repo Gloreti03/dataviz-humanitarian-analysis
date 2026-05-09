@@ -14,7 +14,16 @@
       "Bash(.venv/Scripts/pip install *)",
       "Bash(.venv/Scripts/jupyter nbconvert *)",
       "Bash(.venv/Scripts/python -c \"from scipy import stats; print\\('ok'\\)\")",
-      "Bash(.venv/Scripts/python -c \"import os; [print\\(f'plots/{f}  \\({os.path.getsize\\(f\\\\\"plots/{f}\\\\\"\\)//1024} KB\\)'\\) for f in sorted\\(os.listdir\\('plots'\\)\\)]\")"
+      "Bash(.venv/Scripts/python -c \"import os; [print\\(f'plots/{f}  \\({os.path.getsize\\(f\\\\\"plots/{f}\\\\\"\\)//1024} KB\\)'\\) for f in sorted\\(os.listdir\\('plots'\\)\\)]\")",
+      "Bash(grep -E \"\\\\.\\(csv|png|html|ipynb\\)$\")",
+      "Bash(git rm *)",
+      "Bash(git mv *)",
+      "Bash(git add *)",
+      "Bash(git restore *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)"
     ]
   }
 }

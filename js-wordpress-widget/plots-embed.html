@@ -1,0 +1,27 @@
+<style>
+.bd-plots-section{max-width:880px;margin:48px auto 0;display:flex;flex-direction:column;gap:48px}
+.bd-plots-section iframe{width:100%;display:block;border:none;border-radius:12px;background:#0d1b2a;box-shadow:0 8px 32px rgba(0,0,0,.25)}
+</style>
+
+<script>
+function resizeIframe(iframe){
+  try{ iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px'; }
+  catch(e){}
+}
+</script>
+
+<div class="bd-plots-section">
+
+  <iframe src="http://born-displaced.local/wp-content/uploads/plots/viz5_explanatory_pictogram.html"
+    scrolling="no" onload="resizeIframe(this)"></iframe>
+
+  <iframe src="http://born-displaced.local/wp-content/uploads/plots/viz6_creative_trajectory.html"
+    scrolling="no" onload="resizeIframe(this)"></iframe>
+
+  <iframe src="http://born-displaced.local/wp-content/uploads/plots/viz7_white_hat.html"
+    scrolling="no" onload="resizeIframe(this)"></iframe>
+
+  <iframe src="http://born-displaced.local/wp-content/uploads/plots/viz8_black_hat.html"
+    scrolling="no" onload="resizeIframe(this)"></iframe>
+
+</div>

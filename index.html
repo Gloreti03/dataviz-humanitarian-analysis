@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -18,38 +18,95 @@
 </head>
 <body>
 
+<!-- ════════════════ TOP ALERT BAR ════════════════ -->
+<div class="bd-topbar">
+  <strong>Urgent</strong>
+  <span class="sep">/</span>
+  Forced displacement reached a record 100M+ in 2022 — half of them children
+</div>
+
 <!-- ════════════════ NAV ════════════════ -->
 <nav class="bd-nav">
   <div class="bd-nav-inner">
-    <div class="bd-nav-brand">Born <span>Displaced</span></div>
+    <a href="#top" class="bd-nav-brand">
+      <span class="mark">B</span>Born <em>Displaced</em>
+    </a>
     <ul class="bd-nav-links">
-      <li><a href="#map">Map</a></li>
+      <li><a href="#map">The Map</a></li>
       <li><a href="#dashboards">Dashboards</a></li>
       <li><a href="#stories">Stories</a></li>
       <li><a href="#ethics">Ethics</a></li>
       <li><a href="#sources">Sources</a></li>
     </ul>
+    <a href="#action" class="bd-nav-cta">
+      Read the report <span class="arrow">→</span>
+    </a>
   </div>
 </nav>
 
 <!-- ════════════════ HERO ════════════════ -->
-<header class="bd-hero">
-  <p class="bd-hero-eyebrow">Data Visualization · 2026</p>
-  <h1>Born <em>Displaced</em><br>Survival, Conflict, and the Children Left Behind</h1>
-  <p class="bd-hero-sub">
-    Between 2010 and 2022, more than a hundred million people were forced from their homes.
-    This is the story of the children born into that displacement — told through the data
-    that often refuses to tell it.
-  </p>
-  <div class="bd-hero-meta">
-    <span>2010–2022</span>
-    <span>UNICEF · UNHCR · World Bank</span>
-    <span>8 visualizations</span>
+<header id="top" class="bd-hero">
+  <div class="bd-hero-inner">
+    <div class="bd-hero-text">
+      <p class="bd-hero-eyebrow">Field report · 2010–2022</p>
+      <h1>Born <em>Displaced</em>.<br>The Children Left Behind.</h1>
+      <p class="bd-hero-sub">
+        Between 2010 and 2022, more than a hundred million people were forced
+        from their homes. This is the story of the children born into that
+        displacement — told through the data that often refuses to tell it.
+      </p>
+      <div class="bd-hero-actions">
+        <a href="#action" class="bd-btn bd-btn-primary">
+          Take action <span class="arrow">→</span>
+        </a>
+        <a href="#map" class="bd-btn bd-btn-ghost">
+          Explore the data
+        </a>
+      </div>
+    </div>
+
+    <div class="bd-hero-side">
+      <figure class="bd-hero-image">
+        <figcaption class="bd-hero-image-cap">
+          <em>Photo placeholder</em> — documentary image of a child in a displacement
+          context. Insert verified, ethically-sourced photo with credit.
+        </figcaption>
+      </figure>
+    </div>
   </div>
+
+  <dl class="bd-hero-meta">
+    <div><dt>Period</dt><dd>2010 — 2022</dd></div>
+    <div><dt>Countries</dt><dd>100+</dd></div>
+    <div><dt>Sources</dt><dd>UNICEF · UNHCR · World Bank</dd></div>
+    <div><dt>Visualizations</dt><dd>8 charts</dd></div>
+  </dl>
 </header>
 
-<!-- ════════════════ INTRO ════════════════ -->
-<section class="bd-section">
+<!-- ════════════════ STAT STRIP ════════════════ -->
+<section class="bd-stats" aria-label="Headline figures">
+  <div class="bd-stats-inner">
+    <div class="bd-stat">
+      <span class="num"><em>100M+</em></span>
+      <span class="lbl">people forcibly displaced worldwide by the end of 2022</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>40%</em></span>
+      <span class="lbl">of those displaced are children under the age of 18</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>1 in 4</em></span>
+      <span class="lbl">child deaths aged 1–4 occur in conflict-affected countries</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>12 yrs</em></span>
+      <span class="lbl">of data, country by country, behind every chart in this report</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ INTRO PROSE ════════════════ -->
+<section class="bd-intro">
   <div class="bd-prose">
     <p class="lead">
       Forced displacement is rarely an event. It is a slow, generational pressure on the
@@ -69,16 +126,19 @@
   </div>
 </section>
 
-<!-- ════════════════ SEZIONE 1 — WIDGET INTERATTIVO ════════════════ -->
-<section id="map" class="bd-section">
+<!-- ════════════════ 01 — THE MAP ════════════════ -->
+<section id="map" class="bd-section is-light">
   <div class="bd-section-head">
-    <span class="bd-section-num">01 — The map</span>
-    <h2>Where children are born into crisis</h2>
-    <p>
-      Every country shaded by its current crisis level. <b>Click a country</b> to open
-      its decade-long story: a mortality trend line, peak displacement, and the
-      macroeconomic context behind the numbers.
-    </p>
+    <span class="bd-section-num">01</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">The map</span>
+      <h2>Where children are born into crisis</h2>
+      <p>
+        Every country shaded by its current crisis level. <b>Click a country</b> to open
+        its decade-long story: a mortality trend line, peak displacement, and the
+        macroeconomic context behind the numbers.
+      </p>
+    </div>
   </div>
 
   <div id="born-displaced-widget">
@@ -88,9 +148,9 @@
       <div id="bd-map-wrap"><div class="bd-loading">Loading map…</div></div>
       <div id="bd-map-legend">
         <span class="bd-legend-label">Crisis level</span>
-        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#66bb6a"></div>Low</div>
-        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#ffb74d"></div>Medium</div>
-        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#ef5350"></div>High</div>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#3b6e4a"></div>Low</div>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#c08a1f"></div>Medium</div>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#c1272d"></div>High</div>
       </div>
     </div>
 
@@ -141,126 +201,240 @@
   </div>
 </section>
 
-<!-- ════════════════ SEZIONE 2 — TABLEAU DASHBOARDS ════════════════ -->
+<!-- ════════════════ PULL QUOTE 1 ════════════════ -->
+<aside class="bd-quote">
+  <div class="bd-quote-inner">
+    <span class="mark">“</span>
+    <q>A child born in a displacement camp today is statistically <em>four times</em> more likely to die before their fifth birthday than one born across the border.</q>
+    <cite>— Pull-quote placeholder · replace with sourced report excerpt</cite>
+  </div>
+</aside>
+
+<!-- ════════════════ 02 — THE DASHBOARDS ════════════════ -->
 <section id="dashboards" class="bd-section">
   <div class="bd-section-head">
-    <span class="bd-section-num">02 — The dashboards</span>
-    <h2>Where the data lives</h2>
-    <p>
-      Three Tableau dashboards built around the same core dataset: spatial distribution,
-      country rankings over time, and the relative weight of each crisis at its peak.
-    </p>
+    <span class="bd-section-num">02</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">The dashboards</span>
+      <h2>Where the data lives</h2>
+      <p>
+        Three Tableau dashboards built around the same core dataset:
+        spatial distribution, country rankings over time, and the
+        relative weight of each crisis at its peak.
+      </p>
+    </div>
   </div>
 
-  <div class="bd-plot-stack">
-    <article class="bd-plot is-tableau">
-      <div class="bd-plot-caption">
-        <span class="bd-plot-tag">Tableau · Choropleth</span>
+  <div class="bd-rows">
+
+    <article class="bd-row">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">02.1</span>
+        <span class="bd-row-tag">Tableau · Choropleth</span>
         <h3>Mapping the decade</h3>
-        <p>Displacement and mortality side by side, country by country, year by year.</p>
+        <p>
+          Displacement and mortality side by side, country by country, year by year.
+          The choropleth surface is the easiest entry point into a dataset that
+          spans 12 years and 100+ nations.
+        </p>
+        <div class="bd-row-cite">Source · UNHCR + UNICEF CME · 2010–2022</div>
+      </aside>
+      <div class="bd-row-chart is-tableau">
+        <iframe src="plots/tableau_plots/viz_maps.html" height="700" loading="lazy"></iframe>
       </div>
-      <iframe src="plots/tableau_plots/viz_maps.html" height="700" loading="lazy"></iframe>
     </article>
 
-    <article class="bd-plot is-tableau">
-      <div class="bd-plot-caption">
-        <span class="bd-plot-tag">Tableau · Bump &amp; dot plot</span>
+    <article class="bd-row is-reversed">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">02.2</span>
+        <span class="bd-row-tag">Tableau · Bump &amp; dot plot</span>
         <h3>Who tops the list, year after year</h3>
-        <p>Country rankings shift over the decade. The bump chart shows the order; the dot plot anchors the absolute scale.</p>
+        <p>
+          Country rankings shift over the decade. The bump chart shows the order;
+          the dot plot anchors the absolute scale, so visual movement always carries
+          its real magnitude with it.
+        </p>
+        <div class="bd-row-cite">Source · UNHCR · 2010–2022</div>
+      </aside>
+      <div class="bd-row-chart is-tableau">
+        <iframe src="plots/tableau_plots/viz_crisis.html" height="900" loading="lazy"></iframe>
       </div>
-      <iframe src="plots/tableau_plots/viz_crisis.html" height="900" loading="lazy"></iframe>
     </article>
 
-    <article class="bd-plot is-tableau">
-      <div class="bd-plot-caption">
-        <span class="bd-plot-tag">Tableau · Treemap</span>
+    <article class="bd-row">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">02.3</span>
+        <span class="bd-row-tag">Tableau · Treemap</span>
         <h3>The weight of each crisis</h3>
-        <p>A treemap of the most affected countries, sized by total displaced population in the most recent year.</p>
+        <p>
+          A treemap of the most affected countries, sized by total displaced
+          population in the most recent year. Scale is what gets lost first
+          in headline news — this view restores it.
+        </p>
+        <div class="bd-row-cite">Source · UNHCR · 2022</div>
+      </aside>
+      <div class="bd-row-chart is-tableau">
+        <iframe src="plots/tableau_plots/treemap_crisis.html" height="820" loading="lazy"></iframe>
       </div>
-      <iframe src="plots/tableau_plots/treemap_crisis.html" height="820" loading="lazy"></iframe>
     </article>
+
   </div>
 </section>
 
-<!-- ════════════════ SEZIONE 3 — PYTHON STORIES ════════════════ -->
-<section id="stories" class="bd-section">
+<!-- ════════════════ PULL QUOTE 2 ════════════════ -->
+<aside class="bd-quote is-red">
+  <div class="bd-quote-inner">
+    <span class="mark">“</span>
+    <q>Every figure on this page is a name a parent never thought they would have to write down.</q>
+    <cite>— Pull-quote placeholder · replace with field testimony</cite>
+  </div>
+</aside>
+
+<!-- ════════════════ 03 — THE STORIES ════════════════ -->
+<section id="stories" class="bd-section is-light">
   <div class="bd-section-head">
-    <span class="bd-section-num">03 — The stories</span>
-    <h2>Two ways to feel the numbers</h2>
-    <p>
-      A pictogram for non-experts: every figure stands for a child. And a radial timeline
-      that lets the decade spiral around each country, so you can see where the crisis
-      tightens and where it loosens.
-    </p>
+    <span class="bd-section-num">03</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">The stories</span>
+      <h2>Two ways to feel the numbers</h2>
+      <p>
+        A pictogram for non-experts: every figure stands for a child.
+        And a radial timeline that lets the decade spiral around each
+        country, so you can see where the crisis tightens and where it loosens.
+      </p>
+    </div>
   </div>
 
-  <div class="bd-plot-stack">
-    <article class="bd-plot">
-      <div class="bd-plot-caption">
-        <span class="bd-plot-tag warm">Python · Pictogram</span>
+  <div class="bd-rows">
+
+    <article class="bd-row">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">03.1</span>
+        <span class="bd-row-tag warm">Python · Pictogram</span>
         <h3>Faces, not figures</h3>
-        <p>An explanatory unit chart designed for readers without a statistical background.</p>
+        <p>
+          An explanatory unit chart designed for readers without a statistical
+          background. Each glyph stands for a real magnitude — the goal is to
+          let the eye, not the axis, do the counting.
+        </p>
+        <div class="bd-row-cite">Built with Python · matplotlib</div>
+      </aside>
+      <div class="bd-row-chart">
+        <iframe src="plots/viz5_explanatory_pictogram.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
       </div>
-      <iframe src="plots/viz5_explanatory_pictogram.html" loading="lazy"
-        scrolling="no" onload="resizeIframe(this)"></iframe>
     </article>
 
-    <article class="bd-plot">
-      <div class="bd-plot-caption">
-        <span class="bd-plot-tag warm">Python · Radial timeline</span>
+    <article class="bd-row is-reversed">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">03.2</span>
+        <span class="bd-row-tag warm">Python · Radial timeline</span>
         <h3>The decade, spiralling</h3>
-        <p>For the top displacement countries, each radial arm is a year between 2010 and 2022.</p>
+        <p>
+          For the top displacement countries, each radial arm is a year between
+          2010 and 2022. Time becomes geometry, and the rhythm of each crisis
+          becomes legible at a glance.
+        </p>
+        <div class="bd-row-cite">Built with Python · plotly</div>
+      </aside>
+      <div class="bd-row-chart">
+        <iframe src="plots/viz6_creative_trajectory.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
       </div>
-      <iframe src="plots/viz6_creative_trajectory.html" loading="lazy"
-        scrolling="no" onload="resizeIframe(this)"></iframe>
     </article>
+
   </div>
 </section>
 
-<!-- ════════════════ SEZIONE 4 — WHITE HAT vs BLACK HAT ════════════════ -->
+<!-- ════════════════ 04 — THE ETHICS ════════════════ -->
 <section id="ethics" class="bd-section">
   <div class="bd-section-head">
-    <span class="bd-section-num">04 — The ethics</span>
-    <h2>The same data, told twice</h2>
-    <p>
-      The chart on the left is an honest reading: full axis, regional colour, confidence bands,
-      neutral framing. The one on the right uses the same numbers to mislead — truncated axis,
-      cherry-picked years, causal language where only correlation exists.
-    </p>
+    <span class="bd-section-num">04</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">The ethics</span>
+      <h2>The same data, told twice</h2>
+      <p>
+        The chart on the left is an honest reading: full axis, regional colour,
+        confidence bands, neutral framing. The one on the right uses the same
+        numbers to mislead — truncated axis, cherry-picked years, causal language
+        where only correlation exists.
+      </p>
+    </div>
   </div>
 
   <div class="bd-twoup">
-    <article class="bd-plot white">
-      <div class="bd-plot-caption">
-        <span class="bd-plot-tag white">White hat · Honest</span>
-        <h3>An honest reading</h3>
-        <p>Full axes, regional colour, confidence intervals, methodological caveats.</p>
+    <article>
+      <div class="bd-twoup-caption">
+        <span class="bd-row-tag white">White hat · Honest</span>
+        <h3 style="font-family:'Source Serif 4',serif;font-size:24px;font-weight:700;margin:8px 0 8px;color:var(--ink);letter-spacing:-.012em">An honest reading</h3>
+        <p style="font-size:15px;color:var(--ink-soft);margin:0">Full axes, regional colour, confidence intervals, methodological caveats.</p>
       </div>
-      <iframe src="plots/viz7_white_hat.html" loading="lazy"
-        scrolling="no" onload="resizeIframe(this)"></iframe>
+      <div class="bd-row-chart white">
+        <iframe src="plots/viz7_white_hat.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
+      </div>
     </article>
+    <article>
+      <div class="bd-twoup-caption">
+        <span class="bd-row-tag black">Black hat · Manipulative</span>
+        <h3 style="font-family:'Source Serif 4',serif;font-size:24px;font-weight:700;margin:8px 0 8px;color:var(--ink);letter-spacing:-.012em">A manipulative reading</h3>
+        <p style="font-size:15px;color:var(--ink-soft);margin:0">Truncated axis, cherry-picked years, causal framing, no uncertainty shown.</p>
+      </div>
+      <div class="bd-row-chart black">
+        <iframe src="plots/viz8_black_hat.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
+      </div>
+    </article>
+  </div>
+</section>
 
-    <article class="bd-plot black">
-      <div class="bd-plot-caption">
-        <span class="bd-plot-tag black">Black hat · Manipulative</span>
-        <h3>A manipulative reading</h3>
-        <p>Truncated axis, cherry-picked years, causal framing, no uncertainty shown.</p>
-      </div>
-      <iframe src="plots/viz8_black_hat.html" loading="lazy"
-        scrolling="no" onload="resizeIframe(this)"></iframe>
-    </article>
+<!-- ════════════════ ACTION CTA BAND ════════════════ -->
+<section id="action" class="bd-action">
+  <div class="bd-action-inner">
+    <p class="eyebrow">Take action</p>
+    <h2>The data is the warning. The response is up to us.</h2>
+    <p>
+      Read the full report, share it, or support the organizations working alongside
+      displaced children every day. Every signal counts — and every silence does too.
+    </p>
+    <div class="bd-action-buttons">
+      <a href="#" class="bd-btn bd-btn-primary">Read the full report <span class="arrow">→</span></a>
+      <a href="#" class="bd-btn bd-btn-ghost">Share this page</a>
+    </div>
   </div>
 </section>
 
 <!-- ════════════════ FOOTER ════════════════ -->
 <footer id="sources" class="bd-footer">
-  <h4>Sources &amp; methods</h4>
-  <div class="bd-footer-sources">
-    <span>UNICEF Child Mortality Estimates</span>·
-    <span>UNHCR Refugee Statistics</span>·
-    <span>World Bank Open Data</span>
+  <div class="bd-footer-inner">
+    <div>
+      <h4>Born Displaced</h4>
+      <p style="margin:0;max-width:36ch;color:rgba(255,255,255,.65)">
+        A data-driven report on a decade of forced displacement and the children
+        born into it. 2010–2022.
+      </p>
+    </div>
+    <div>
+      <h4>Sources</h4>
+      <ul>
+        <li>UNICEF Child Mortality Estimates</li>
+        <li>UNHCR Refugee Statistics</li>
+        <li>World Bank Open Data</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Methods</h4>
+      <ul>
+        <li><a href="#ethics">Ethical framing</a></li>
+        <li><a href="#sources">Dataset notes</a></li>
+        <li><a href="#">License &amp; reuse</a></li>
+      </ul>
+    </div>
   </div>
-  <p class="bd-footer-credit">Data Visualization Final Project · 2026</p>
+  <div class="bd-footer-credit">
+    <span>Data Visualization · Final Project · 2026</span>
+    <span>Edition 01 / Draft</span>
+  </div>
 </footer>
 
 </body>

@@ -3,17 +3,21 @@
 # Born Displaced
 ### The Silent Crisis Killing Children We Never See
 
+[![Live Website](https://img.shields.io/badge/Live_Website-View_Project-2ea44f?style=for-the-badge&logo=github)](https://gloreti03.github.io/dataviz-humanitarian-analysis/)
+[![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-orange?style=for-the-badge&logo=jupyter)](https://jupyter.org/)
+
 *An IFRC Data & Analytics Unit Campaign, 2023*
 
 </div>
 
 ---
 
-## 🌐 Live Website
+## Live Website
 
 The full interactive project is available here:
 
-### 👉 **[https://gloreti03.github.io/dataviz-humanitarian-analysis/](https://gloreti03.github.io/dataviz-humanitarian-analysis/)** 👈
+### **[https://gloreti03.github.io/dataviz-humanitarian-analysis/](https://gloreti03.github.io/dataviz-humanitarian-analysis/)**
 
 ---
 

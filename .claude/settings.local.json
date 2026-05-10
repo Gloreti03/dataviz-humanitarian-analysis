@@ -31,7 +31,8 @@
       "PowerShell(python \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\check_nb.py\")",
       "PowerShell(& \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\venv\\\\Scripts\\\\python.exe\" --version 2>&1)",
       "PowerShell(python \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\fix_cells.py\")",
-      "Bash(dir \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\plots\"2)"
+      "Bash(dir \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\plots\"2)",
+      "Bash(python -)"
     ]
   }
 }

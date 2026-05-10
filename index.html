@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Born Displaced — Survival, Conflict, and the Children Left Behind</title>
+  <meta name="description" content="A decade of forced displacement and child mortality, mapped country by country. 2010–2022.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.27.0/plotly.min.js" defer></script>
+  <script src="js/widget.js" defer></script>
+</head>
+<body>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav class="bd-nav">
+  <div class="bd-nav-inner">
+    <div class="bd-nav-brand">Born <span>Displaced</span></div>
+    <ul class="bd-nav-links">
+      <li><a href="#map">Map</a></li>
+      <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#stories">Stories</a></li>
+      <li><a href="#ethics">Ethics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ════════════════ HERO ════════════════ -->
+<header class="bd-hero">
+  <p class="bd-hero-eyebrow">Data Visualization · 2026</p>
+  <h1>Born <em>Displaced</em><br>Survival, Conflict, and the Children Left Behind</h1>
+  <p class="bd-hero-sub">
+    Between 2010 and 2022, more than a hundred million people were forced from their homes.
+    This is the story of the children born into that displacement — told through the data
+    that often refuses to tell it.
+  </p>
+  <div class="bd-hero-meta">
+    <span>2010–2022</span>
+    <span>UNICEF · UNHCR · World Bank</span>
+    <span>8 visualizations</span>
+  </div>
+</header>
+
+<!-- ════════════════ INTRO ════════════════ -->
+<section class="bd-section">
+  <div class="bd-prose">
+    <p class="lead">
+      Forced displacement is rarely an event. It is a slow, generational pressure on the
+      youngest lives — measured not just in border crossings, but in deaths that should not
+      have happened.
+    </p>
+    <p>
+      This project follows two indicators across a decade and 100+ countries: the number of
+      people displaced inside or beyond their borders, and the mortality rate of children
+      between one and four years old. Where they intersect, a pattern emerges that no single
+      chart can hold.
+    </p>
+    <p>
+      Scroll through to explore the map, the country-level dashboards, and the deliberate
+      contrast between an honest reading of the data and a manipulative one.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════ SEZIONE 1 — WIDGET INTERATTIVO ════════════════ -->
+<section id="map" class="bd-section">
+  <div class="bd-section-head">
+    <span class="bd-section-num">01 — The map</span>
+    <h2>Where children are born into crisis</h2>
+    <p>
+      Every country shaded by its current crisis level. <b>Click a country</b> to open
+      its decade-long story: a mortality trend line, peak displacement, and the
+      macroeconomic context behind the numbers.
+    </p>
+  </div>
+
+  <div id="born-displaced-widget">
+    <div id="bd-map-section">
+      <h2 class="bd-map-title">Where children are born into crisis</h2>
+      <p class="bd-map-subtitle">A decade of forced displacement and child mortality, mapped country by country. <b>Click a country</b> to read its story.</p>
+      <div id="bd-map-wrap"><div class="bd-loading">Loading map…</div></div>
+      <div id="bd-map-legend">
+        <span class="bd-legend-label">Crisis level</span>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#66bb6a"></div>Low</div>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#ffb74d"></div>Medium</div>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#ef5350"></div>High</div>
+      </div>
+    </div>
+
+    <div id="bd-card-wrap">
+      <div id="bd-card">
+        <button id="bd-close" title="Back to map">✕ map</button>
+        <div class="bd-header">
+          <div class="bd-title-wrap">
+            <span id="bd-flag"></span>
+            <h3 id="bd-country-name"></h3>
+          </div>
+          <span id="bd-crisis-badge"></span>
+        </div>
+
+        <div class="bd-body">
+          <div class="bd-chart-section">
+            <div class="bd-chart-wrap">
+              <canvas id="bd-mortality-chart"></canvas>
+            </div>
+            <p id="bd-insight" class="bd-insight"></p>
+          </div>
+
+          <div class="bd-metrics-section">
+            <div class="bd-metric-block">
+              <span class="bd-section-label">Peak displacement</span>
+              <div class="bd-bar-track">
+                <div id="bd-disp-bar" class="bd-bar-fill" style="width:0%"></div>
+              </div>
+              <span id="bd-disp-value" class="bd-disp-value"></span>
+            </div>
+
+            <div class="bd-info-grid">
+              <div class="bd-info-tile">
+                <span class="bd-info-tile-label">Latest mortality (1–4)</span>
+                <span id="bd-mortality-value" class="bd-info-tile-value">—</span>
+              </div>
+              <div class="bd-info-tile">
+                <span class="bd-info-tile-label">GDP per capita</span>
+                <span id="bd-gdp-value" class="bd-info-tile-value">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="bd-footnote">Sources: UNICEF CME · UNHCR · World Bank · 2010–2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SEZIONE 2 — TABLEAU DASHBOARDS ════════════════ -->
+<section id="dashboards" class="bd-section">
+  <div class="bd-section-head">
+    <span class="bd-section-num">02 — The dashboards</span>
+    <h2>Where the data lives</h2>
+    <p>
+      Three Tableau dashboards built around the same core dataset: spatial distribution,
+      country rankings over time, and the relative weight of each crisis at its peak.
+    </p>
+  </div>
+
+  <div class="bd-plot-stack">
+    <article class="bd-plot is-tableau">
+      <div class="bd-plot-caption">
+        <span class="bd-plot-tag">Tableau · Choropleth</span>
+        <h3>Mapping the decade</h3>
+        <p>Displacement and mortality side by side, country by country, year by year.</p>
+      </div>
+      <iframe src="plots/tableau_plots/viz_maps.html" height="700" loading="lazy"></iframe>
+    </article>
+
+    <article class="bd-plot is-tableau">
+      <div class="bd-plot-caption">
+        <span class="bd-plot-tag">Tableau · Bump &amp; dot plot</span>
+        <h3>Who tops the list, year after year</h3>
+        <p>Country rankings shift over the decade. The bump chart shows the order; the dot plot anchors the absolute scale.</p>
+      </div>
+      <iframe src="plots/tableau_plots/viz_crisis.html" height="900" loading="lazy"></iframe>
+    </article>
+
+    <article class="bd-plot is-tableau">
+      <div class="bd-plot-caption">
+        <span class="bd-plot-tag">Tableau · Treemap</span>
+        <h3>The weight of each crisis</h3>
+        <p>A treemap of the most affected countries, sized by total displaced population in the most recent year.</p>
+      </div>
+      <iframe src="plots/tableau_plots/treemap_crisis.html" height="820" loading="lazy"></iframe>
+    </article>
+  </div>
+</section>
+
+<!-- ════════════════ SEZIONE 3 — PYTHON STORIES ════════════════ -->
+<section id="stories" class="bd-section">
+  <div class="bd-section-head">
+    <span class="bd-section-num">03 — The stories</span>
+    <h2>Two ways to feel the numbers</h2>
+    <p>
+      A pictogram for non-experts: every figure stands for a child. And a radial timeline
+      that lets the decade spiral around each country, so you can see where the crisis
+      tightens and where it loosens.
+    </p>
+  </div>
+
+  <div class="bd-plot-stack">
+    <article class="bd-plot">
+      <div class="bd-plot-caption">
+        <span class="bd-plot-tag warm">Python · Pictogram</span>
+        <h3>Faces, not figures</h3>
+        <p>An explanatory unit chart designed for readers without a statistical background.</p>
+      </div>
+      <iframe src="plots/viz5_explanatory_pictogram.html" loading="lazy"
+        scrolling="no" onload="resizeIframe(this)"></iframe>
+    </article>
+
+    <article class="bd-plot">
+      <div class="bd-plot-caption">
+        <span class="bd-plot-tag warm">Python · Radial timeline</span>
+        <h3>The decade, spiralling</h3>
+        <p>For the top displacement countries, each radial arm is a year between 2010 and 2022.</p>
+      </div>
+      <iframe src="plots/viz6_creative_trajectory.html" loading="lazy"
+        scrolling="no" onload="resizeIframe(this)"></iframe>
+    </article>
+  </div>
+</section>
+
+<!-- ════════════════ SEZIONE 4 — WHITE HAT vs BLACK HAT ════════════════ -->
+<section id="ethics" class="bd-section">
+  <div class="bd-section-head">
+    <span class="bd-section-num">04 — The ethics</span>
+    <h2>The same data, told twice</h2>
+    <p>
+      The chart on the left is an honest reading: full axis, regional colour, confidence bands,
+      neutral framing. The one on the right uses the same numbers to mislead — truncated axis,
+      cherry-picked years, causal language where only correlation exists.
+    </p>
+  </div>
+
+  <div class="bd-twoup">
+    <article class="bd-plot white">
+      <div class="bd-plot-caption">
+        <span class="bd-plot-tag white">White hat · Honest</span>
+        <h3>An honest reading</h3>
+        <p>Full axes, regional colour, confidence intervals, methodological caveats.</p>
+      </div>
+      <iframe src="plots/viz7_white_hat.html" loading="lazy"
+        scrolling="no" onload="resizeIframe(this)"></iframe>
+    </article>
+
+    <article class="bd-plot black">
+      <div class="bd-plot-caption">
+        <span class="bd-plot-tag black">Black hat · Manipulative</span>
+        <h3>A manipulative reading</h3>
+        <p>Truncated axis, cherry-picked years, causal framing, no uncertainty shown.</p>
+      </div>
+      <iframe src="plots/viz8_black_hat.html" loading="lazy"
+        scrolling="no" onload="resizeIframe(this)"></iframe>
+    </article>
+  </div>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer id="sources" class="bd-footer">
+  <h4>Sources &amp; methods</h4>
+  <div class="bd-footer-sources">
+    <span>UNICEF Child Mortality Estimates</span>·
+    <span>UNHCR Refugee Statistics</span>·
+    <span>World Bank Open Data</span>
+  </div>
+  <p class="bd-footer-credit">Data Visualization Final Project · 2026</p>
+</footer>
+
+</body>
+</html>

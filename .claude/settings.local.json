@@ -23,7 +23,9 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(git fetch *)",
-      "Bash(git pull *)"
+      "Bash(git pull *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(ls \"C:\\\\Users\\\\LENOVO\\\\Documents\\\\dataviz-humanitarian-analysis\" | Where-Object { $_.Name -ne \"venv\" })"
     ]
   }
 }

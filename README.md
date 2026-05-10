@@ -1,11 +1,7 @@
 <div align="center">
 
 # Born Displaced
-**The Silent Crisis Killing Children We Never See**
-
-[![Live Website](https://img.shields.io/badge/Live_Website-View_Project-2ea44f?style=for-the-badge&logo=github)](https://Gloreti03.github.io/dataviz-humanitarian-analysis/)
-[![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)](https://www.python.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-orange?style=for-the-badge&logo=jupyter)](https://jupyter.org/)
+### The Silent Crisis Killing Children We Never See
 
 *An IFRC Data & Analytics Unit Campaign, 2023*
 
@@ -13,9 +9,17 @@
 
 ---
 
+## 🌐 Live Website
+
+The full interactive project is available here:
+
+### 👉 **[https://gloreti03.github.io/dataviz-humanitarian-analysis/](https://gloreti03.github.io/dataviz-humanitarian-analysis/)** 👈
+
+---
+
 ## About The Project
 
-Between 2018 and 2022, an estimated **1.9 million children** were born as refugees, approximately 385,000 every year. They are born into camps, transit zones, and countries that did not ask for them and cannot always protect them. 
+Between 2018 and 2022, an estimated **1.9 million children** were born as refugees, approximately 385,000 every year. They are born into camps, transit zones, and countries that did not ask for them and cannot always protect them.
 
 This repository contains the exploratory data analysis and visualization source code for the **Born Displaced** campaign. It combines the burden of displacement with the burden of child mortality using data from UNHCR, UNICEF, and the World Bank, tracking 195 countries over 13 years (2010–2022).
 
@@ -23,7 +27,7 @@ The analysis builds a **Crisis Index** to identify where children are both fleei
 
 ## Getting Started
 
-Follow these simple steps to run the data analysis and visualizations locally:
+Follow these steps to run the data analysis and visualizations locally:
 
 ### 1. Clone the repository
 ```bash
@@ -44,13 +48,21 @@ Start Jupyter Notebook to explore the data preparation and visualizations:
 ```bash
 jupyter notebook
 ```
-- **`cleaning_integration.ipynb`**: Data cleaning and integration processes.
-- **`python_visualizations.ipynb`**: Data visualizations generation.
+- **`cleaning_integration.ipynb`** — Data cleaning and integration processes
+- **`python_visualizations.ipynb`** — Data visualizations generation
 
 ## Data Sources
-The datasets used in this project include:
-- **UNHCR**: Global Trends in Forced Displacement 2022
-- **UNICEF**: Levels and Trends in Child Mortality 2022
-- **World Bank**: WDI Population and Demographics
+
+| Source | Dataset |
+|--------|---------|
+| **UNHCR** | Global Trends in Forced Displacement 2022 |
+| **UNICEF** | Levels and Trends in Child Mortality 2022 |
+| **World Bank** | WDI Population and Demographics |
+
+---
+
+<div align="center">
 
 *This is not a refugee crisis. It is a civilizational failure.*
+
+</div>

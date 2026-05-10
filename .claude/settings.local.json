@@ -25,7 +25,12 @@
       "Bash(git fetch *)",
       "Bash(git pull *)",
       "PowerShell(New-Item *)",
-      "PowerShell(ls \"C:\\\\Users\\\\LENOVO\\\\Documents\\\\dataviz-humanitarian-analysis\" | Where-Object { $_.Name -ne \"venv\" })"
+      "PowerShell(ls \"C:\\\\Users\\\\LENOVO\\\\Documents\\\\dataviz-humanitarian-analysis\" | Where-Object { $_.Name -ne \"venv\" })",
+      "Bash(python3 *)",
+      "PowerShell(python \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\fix_notebook.py\")",
+      "PowerShell(python \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\check_nb.py\")",
+      "PowerShell(& \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\venv\\\\Scripts\\\\python.exe\" --version 2>&1)",
+      "PowerShell(python \"C:\\\\users\\\\lenovo\\\\Documents\\\\dataviz-humanitarian-analysis\\\\fix_cells.py\")"
     ]
   }
 }

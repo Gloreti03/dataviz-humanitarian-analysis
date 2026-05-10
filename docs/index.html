@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Born Displaced — The Silent Crisis Killing Children We Never See</title>
+  <meta name="description" content="An IFRC Data & Analytics Unit campaign on a decade of forced displacement and child mortality. 2010–2022.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.27.0/plotly.min.js" defer></script>
+  <script>
+    window.resizeIframe = function(iframe){
+      if (!iframe) return;
+      try {
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        if (doc && doc.body) iframe.style.height = (doc.body.scrollHeight + 20) + 'px';
+      } catch(e){}
+    };
+  </script>
+  <script src="js/widget.js" defer></script>
+</head>
+<body>
+
+<!-- ════════════════ TOP ALERT BAR ════════════════ -->
+<div class="bd-topbar">
+  <strong>The crisis we stopped counting</strong>
+  <span class="sep">/</span>
+  108.4 million people forcibly displaced by the end of 2022 — 41% are children
+</div>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav class="bd-nav">
+  <div class="bd-nav-inner">
+    <a href="#top" class="bd-nav-brand">
+      <span class="mark" aria-hidden="true"></span>Born <em>Displaced</em>
+    </a>
+    <ul class="bd-nav-links">
+      <li><a href="#map">The Map</a></li>
+      <li><a href="#dashboards">The Crises</a></li>
+      <li><a href="#stories">The Stories</a></li>
+      <li><a href="#ethics">The Ethics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+    <a href="#action" class="bd-nav-cta">
+      Support the campaign <span class="arrow">→</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ════════════════ HERO ════════════════ -->
+<header id="top" class="bd-hero">
+  <div class="bd-hero-inner">
+    <div class="bd-hero-text">
+      <p class="bd-hero-eyebrow">IFRC Data &amp; Analytics Unit · Campaign 2023</p>
+      <h1>Born <em>Displaced.</em><br>The silent crisis killing children we never see.</h1>
+      <p class="bd-hero-sub">
+        Between 2010 and 2022, the number of forcibly displaced people more
+        than doubled — from 41 million to 108.4 million. This is the story
+        of the children born into that displacement, and of the deaths the
+        world has quietly decided to accept.
+      </p>
+      <div class="bd-hero-actions">
+        <a href="#action" class="bd-btn bd-btn-primary">
+          Support the campaign <span class="arrow">→</span>
+        </a>
+        <a href="#map" class="bd-btn bd-btn-ghost">
+          Read the data
+        </a>
+      </div>
+    </div>
+
+    <div class="bd-hero-side">
+      <figure class="bd-hero-image">
+        <figcaption class="bd-hero-image-cap">
+          <em>Photo placeholder.</em> Documentary image of a child in an
+          IFRC-supported pediatric ward. Insert verified, ethically-sourced
+          photograph with credit before publication.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <dl class="bd-hero-meta">
+    <div><dt>Reporting period</dt><dd>2010 — 2022</dd></div>
+    <div><dt>Countries tracked</dt><dd>195</dd></div>
+    <div><dt>Data partners</dt><dd>UNHCR · UNICEF · World Bank</dd></div>
+    <div><dt>Visualizations</dt><dd>8 charts</dd></div>
+  </dl>
+</header>
+
+<!-- ════════════════ STAT STRIP ════════════════ -->
+<section class="bd-stats" aria-label="Headline figures">
+  <div class="bd-stats-inner">
+    <div class="bd-stat">
+      <span class="num"><em>108.4M</em></span>
+      <span class="lbl">people forcibly displaced by the end of 2022 — the largest figure in UNHCR's history.</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>1 in 74</em></span>
+      <span class="lbl">people on Earth has been forced to flee their home.</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>41%</em></span>
+      <span class="lbl">of those displaced are children — though they make up only 30% of the world's population.</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>385K</em></span>
+      <span class="lbl">children born as refugees every year between 2018 and 2022.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ INTRO — THE WORLD WE INHERITED ════════════════ -->
+<section class="bd-intro">
+  <div class="bd-prose">
+    <p class="lead">
+      In 2010, approximately 41 million people were forcibly displaced worldwide.
+      By the end of 2022, that number had more than doubled. 108.4 million
+      people. The largest figure ever recorded in UNHCR's history — and the
+      biggest single-year increase ever measured.
+    </p>
+    <p>
+      To understand what this means in human terms: more than 1 in every 74
+      people on Earth has been forced to flee. Almost 90 percent of them live
+      in low- and middle-income countries — places already stretched thin,
+      where every additional displaced family is one more pull on a healthcare
+      system that was barely holding.
+    </p>
+    <p>
+      This is not a refugee crisis. It is a civilizational failure. And the
+      children born inside it are the part of the story we have stopped
+      counting.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════ 01 — THE MAP ════════════════ -->
+<section id="map" class="bd-section is-light">
+  <div class="bd-section-head">
+    <span class="bd-section-num">01</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">The map · Where children are born into crisis</span>
+      <h2>Children are not statistics — but the statistics are about children.</h2>
+      <p>
+        Children account for <b>41 percent</b> of all forcibly displaced people, despite making up
+        only 30 percent of the world's population. Children living in fragile or conflict-affected
+        settings are <b>almost three times more likely</b> to die before their fifth birthday than
+        children elsewhere. <b>Click any country</b> to read its decade-long story.
+      </p>
+    </div>
+  </div>
+
+  <div id="born-displaced-widget">
+    <div id="bd-map-section">
+      <h2 class="bd-map-title">Where children are born into crisis</h2>
+      <p class="bd-map-subtitle">A decade of forced displacement and child mortality, mapped country by country. <b>Click a country</b> to read its story.</p>
+      <div id="bd-map-wrap"><div class="bd-loading">Loading map…</div></div>
+      <div id="bd-map-legend">
+        <span class="bd-legend-label">Crisis level</span>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#3b6e4a"></div>Low</div>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#c08a1f"></div>Medium</div>
+        <div class="bd-legend-item"><div class="bd-legend-dot" style="background:#c1272d"></div>High</div>
+      </div>
+    </div>
+
+    <div id="bd-card-wrap">
+      <div id="bd-card">
+        <button id="bd-close" title="Back to map">✕ map</button>
+        <div class="bd-header">
+          <div class="bd-title-wrap">
+            <span id="bd-flag"></span>
+            <h3 id="bd-country-name"></h3>
+          </div>
+          <span id="bd-crisis-badge"></span>
+        </div>
+
+        <div class="bd-body">
+          <div class="bd-chart-section">
+            <div class="bd-chart-wrap">
+              <canvas id="bd-mortality-chart"></canvas>
+            </div>
+            <p id="bd-insight" class="bd-insight"></p>
+          </div>
+
+          <div class="bd-metrics-section">
+            <div class="bd-metric-block">
+              <span class="bd-section-label">Peak displacement</span>
+              <div class="bd-bar-track">
+                <div id="bd-disp-bar" class="bd-bar-fill" style="width:0%"></div>
+              </div>
+              <span id="bd-disp-value" class="bd-disp-value"></span>
+            </div>
+
+            <div class="bd-info-grid">
+              <div class="bd-info-tile">
+                <span class="bd-info-tile-label">Latest mortality (1–4)</span>
+                <span id="bd-mortality-value" class="bd-info-tile-value">—</span>
+              </div>
+              <div class="bd-info-tile">
+                <span class="bd-info-tile-label">GDP per capita</span>
+                <span id="bd-gdp-value" class="bd-info-tile-value">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="bd-footnote">Sources: UNICEF CME · UNHCR · World Bank · 2010–2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ PULL QUOTE 1 ════════════════ -->
+<aside class="bd-quote">
+  <div class="bd-quote-inner">
+    <span class="mark">“</span>
+    <q>This is not a refugee crisis. It is a <em>civilizational failure</em>.</q>
+    <cite>— Born Displaced · The world we inherited</cite>
+  </div>
+</aside>
+
+<!-- ════════════════ 02 — THE CRISES ════════════════ -->
+<section id="dashboards" class="bd-section">
+  <div class="bd-section-head">
+    <span class="bd-section-num">02</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">The crises the world forgot</span>
+      <h2>One war on every front page. Dozens more in silence.</h2>
+      <p>
+        The full-scale invasion of Ukraine in 2022 rightly shocked the world — the largest
+        forced displacement crisis by velocity in a single year. But while cameras followed
+        one war, dozens of others continued in silence: <b>Afghanistan</b>, the
+        <b>Central African Republic</b>, <b>Syria</b>, the <b>Democratic Republic of Congo</b>,
+        <b>Colombia</b>. Three dashboards, one dataset, and a pattern the headlines never showed.
+      </p>
+    </div>
+  </div>
+
+  <div class="bd-rows">
+
+    <article class="bd-row">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">02.1 · Choropleth</span>
+        <span class="bd-row-tag">Tableau · Spatial</span>
+        <h3>Mapping the decade</h3>
+        <p>
+          Displacement and child mortality, country by country, year by year.
+          The choropleth is the easiest entry point into a dataset that spans
+          thirteen years and 195 nations — and it shows immediately that the
+          burden is not where the cameras are.
+        </p>
+        <div class="bd-row-cite">UNHCR · UNICEF CME · 2010–2022</div>
+      </aside>
+      <div class="bd-row-chart is-tableau">
+        <iframe src="plots/tableau/viz_maps.html" height="600" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <article class="bd-row is-reversed">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">02.2 · Bump &amp; dot</span>
+        <span class="bd-row-tag">Tableau · Ranking</span>
+        <h3>The same names, year after year</h3>
+        <p>
+          The bump chart shows how country rankings shift over the decade; the
+          dot plot anchors the absolute scale. Syria, the Central African Republic,
+          Colombia, the DRC, Afghanistan — five different kinds of crisis, one
+          shared rhythm: a child born today has a dramatically lower chance of
+          surviving to age fifteen than a child born anywhere else.
+        </p>
+        <div class="bd-row-cite">UNHCR · 2010–2022</div>
+      </aside>
+      <div class="bd-row-chart is-tableau">
+        <iframe src="plots/tableau/viz_crisis.html" height="720" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <article class="bd-row">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">02.3 · Treemap</span>
+        <span class="bd-row-tag">Tableau · Magnitude</span>
+        <h3>The weight of each crisis</h3>
+        <p>
+          Sized by total displaced population in the most recent year, the treemap
+          restores what headlines lose first: <em>scale</em>. Each rectangle is a country
+          where the healthcare system meant to protect displaced children has
+          collapsed, been bombed, or was never built in the first place.
+        </p>
+        <div class="bd-row-cite">UNHCR · 2022</div>
+      </aside>
+      <div class="bd-row-chart is-tableau">
+        <iframe src="plots/tableau/treemap_crisis.html" height="600" loading="lazy"></iframe>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ════════════════ PULL QUOTE 2 ════════════════ -->
+<aside class="bd-quote is-red">
+  <div class="bd-quote-inner">
+    <span class="mark">“</span>
+    <q>These are not statistics. These are children who never received a diagnosis. Children who never reached a ward. Children who died because <em>there was no pediatric bed</em> within a day's walk.</q>
+    <cite>— Born Displaced · The crises the world forgot</cite>
+  </div>
+</aside>
+
+<!-- ════════════════ 03 — THE STORIES ════════════════ -->
+<section id="stories" class="bd-section is-light">
+  <div class="bd-section-head">
+    <span class="bd-section-num">03</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">What displacement does to a child's body</span>
+      <h2>Two ways to feel the numbers when the numbers stop landing.</h2>
+      <p>
+        In 2021, more than <b>8,000 children</b> — an average of 22 per day — were killed
+        or maimed in conflict zones. The far greater toll is invisible: the children who die
+        not from bombs, but from the diseases that thrive in the vacuum left behind. Malaria.
+        Pneumonia. Diarrhea. Malnutrition. Conditions that cost less than ten dollars to treat
+        in a functioning health system.
+      </p>
+    </div>
+  </div>
+
+  <div class="bd-rows">
+
+    <article class="bd-row">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">03.1 · Pictogram</span>
+        <span class="bd-row-tag warm">Python · Explanatory</span>
+        <h3>Faces, not figures</h3>
+        <p>
+          An explanatory unit chart for readers without a statistical background. Each
+          glyph stands for a real magnitude: 4.9 million children died before reaching age
+          five in 2022 alone — one every six seconds. Most of these deaths were preventable.
+        </p>
+        <div class="bd-row-cite">UNICEF CME · 2022</div>
+      </aside>
+      <div class="bd-row-chart">
+        <iframe src="plots/viz/viz5_explanatory_pictogram.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
+      </div>
+    </article>
+
+    <article class="bd-row is-reversed">
+      <aside class="bd-row-caption">
+        <span class="bd-row-num">03.2 · Radial timeline</span>
+        <span class="bd-row-tag warm">Python · Creative</span>
+        <h3>The decade, spiralling</h3>
+        <p>
+          For the top displacement countries, each radial arm is a year between 2010 and
+          2022. Time becomes geometry, and the rhythm of each crisis becomes legible —
+          where the curve tightens around Afghanistan, where it flares for Syria, where it
+          never relents for the Democratic Republic of Congo.
+        </p>
+        <div class="bd-row-cite">UNHCR · 2010–2022</div>
+      </aside>
+      <div class="bd-row-chart">
+        <iframe src="plots/viz/viz6_creative_trajectory.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ════════════════ INTERLUDE — SILENT FACTS ════════════════ -->
+<section class="bd-stats" aria-label="The crises the headlines forgot">
+  <div class="bd-stats-inner">
+    <div class="bd-stat">
+      <span class="num"><em>+90%</em></span>
+      <span class="lbl">rise in child malnutrition cases at ICRC-supported hospitals in Afghanistan in 2022 vs. 2021.</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>5.6%</em></span>
+      <span class="lbl">of the Central African Republic's population died in 2022 — four times higher than UN estimates.</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>60%</em></span>
+      <span class="lbl">of children under five in parts of CAR die at home — no hospital reachable in time.</span>
+    </div>
+    <div class="bd-stat">
+      <span class="num"><em>3×</em></span>
+      <span class="lbl">higher under-five mortality for children in fragile or conflict-affected settings.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 04 — THE ETHICS ════════════════ -->
+<section id="ethics" class="bd-section">
+  <div class="bd-section-head">
+    <span class="bd-section-num">04</span>
+    <div class="bd-section-head-text">
+      <span class="bd-section-tag">The ethics · How a number can lie</span>
+      <h2>The same data, told twice. One reading saves lives. The other sells them.</h2>
+      <p>
+        On the left: an honest reading. Full axis, regional colour, confidence bands,
+        neutral framing. On the right: the same numbers used to mislead — truncated axis,
+        cherry-picked years, causal language where only correlation exists. We show both
+        because the choices behind a chart are choices about who gets believed.
+      </p>
+    </div>
+  </div>
+
+  <div class="bd-twoup">
+    <article>
+      <div class="bd-twoup-caption">
+        <span class="bd-row-tag white">White hat · Honest</span>
+        <h3 class="bd-twoup-h3">An honest reading</h3>
+        <p class="bd-twoup-p">Full axes, regional colour, confidence intervals, methodological caveats.</p>
+      </div>
+      <div class="bd-row-chart white">
+        <iframe src="plots/viz/viz7_white_hat.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
+      </div>
+    </article>
+    <article>
+      <div class="bd-twoup-caption">
+        <span class="bd-row-tag black">Black hat · Manipulative</span>
+        <h3 class="bd-twoup-h3">A manipulative reading</h3>
+        <p class="bd-twoup-p">Truncated axis, cherry-picked years, causal framing, no uncertainty shown.</p>
+      </div>
+      <div class="bd-row-chart black">
+        <iframe src="plots/viz/viz8_black_hat.html" loading="lazy"
+          scrolling="no" onload="resizeIframe(this)"></iframe>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ════════════════ ACTION CTA BAND ════════════════ -->
+<section id="action" class="bd-action">
+  <div class="bd-action-inner">
+    <p class="eyebrow">Why we act now</p>
+    <h2>The accident of being born in a conflict zone should not be a death sentence.</h2>
+    <p>
+      The IFRC's pediatric hospital campaign does not claim to end wars. It claims
+      something smaller and more achievable: that a child who reaches a hospital should
+      not die for lack of a bed, a trained nurse, or a malaria test. Read the full
+      report, share it, or stand with the volunteers working alongside displaced
+      children every day.
+    </p>
+    <div class="bd-action-buttons">
+      <a href="#" class="bd-btn bd-btn-primary">Support the campaign <span class="arrow">→</span></a>
+      <a href="#" class="bd-btn bd-btn-ghost">Download the full report</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer id="sources" class="bd-footer">
+  <div class="bd-footer-inner">
+    <div>
+      <h4>Born Displaced</h4>
+      <p style="margin:0;max-width:38ch;color:rgba(255,255,255,.65)">
+        An IFRC Data &amp; Analytics Unit campaign on a decade of forced displacement
+        and the children born into it. Built around 13 years of data from UNHCR,
+        UNICEF, and the World Bank, tracking 195 countries.
+      </p>
+    </div>
+    <div>
+      <h4>Sources</h4>
+      <ul>
+        <li>UNHCR Global Trends in Forced Displacement 2022</li>
+        <li>UNICEF Levels and Trends in Child Mortality 2022</li>
+        <li>ICRC Humanitarian Needs Report 2022</li>
+        <li>Karume et al., <em>Conflict and Health</em>, 2023</li>
+        <li>Save the Children, <em>Stop the War on Children</em>, 2022</li>
+        <li>MSF, <em>Central African Republic: A State of Silent Crisis</em></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Methods</h4>
+      <ul>
+        <li><a href="#ethics">Ethical framing</a></li>
+        <li><a href="#sources">Dataset notes</a></li>
+        <li><a href="#">License &amp; reuse</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bd-footer-credit">
+    <span>IFRC Data &amp; Analytics Unit · Campaign 2023</span>
+    <span>Edition 01 · Final</span>
+  </div>
+</footer>
+
+</body>
+</html>

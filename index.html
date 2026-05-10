@@ -15,7 +15,6 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.27.0/plotly.min.js" defer></script>
   <script>
-    // Inline preview stub. Replace with js/widget.js in production.
     window.resizeIframe = function(iframe){
       if (!iframe) return;
       try {
@@ -23,14 +22,8 @@
         if (doc && doc.body) iframe.style.height = (doc.body.scrollHeight + 20) + 'px';
       } catch(e){}
     };
-    document.addEventListener('DOMContentLoaded', function(){
-      const wrap = document.getElementById('bd-map-wrap');
-      if (wrap){
-        wrap.innerHTML = '<div class="bd-loading">Map widget — preview placeholder</div>';
-        wrap.style.minHeight = '420px';
-      }
-    });
   </script>
+  <script src="js/widget.js" defer></script>
 </head>
 <body>
 
@@ -265,7 +258,7 @@
         <div class="bd-row-cite">UNHCR · UNICEF CME · 2010–2022</div>
       </aside>
       <div class="bd-row-chart is-tableau">
-        <iframe src="plots/tableau_plots/viz_maps.html" height="600" loading="lazy"></iframe>
+        <iframe src="plots/tableau/viz_maps.html" height="600" loading="lazy"></iframe>
       </div>
     </article>
 
@@ -284,7 +277,7 @@
         <div class="bd-row-cite">UNHCR · 2010–2022</div>
       </aside>
       <div class="bd-row-chart is-tableau">
-        <iframe src="plots/tableau_plots/viz_crisis.html" height="720" loading="lazy"></iframe>
+        <iframe src="plots/tableau/viz_crisis.html" height="720" loading="lazy"></iframe>
       </div>
     </article>
 
@@ -302,7 +295,7 @@
         <div class="bd-row-cite">UNHCR · 2022</div>
       </aside>
       <div class="bd-row-chart is-tableau">
-        <iframe src="plots/tableau_plots/treemap_crisis.html" height="600" loading="lazy"></iframe>
+        <iframe src="plots/tableau/treemap_crisis.html" height="600" loading="lazy"></iframe>
       </div>
     </article>
 
@@ -350,7 +343,7 @@
         <div class="bd-row-cite">UNICEF CME · 2022</div>
       </aside>
       <div class="bd-row-chart">
-        <iframe src="plots/viz5_explanatory_pictogram.html" loading="lazy"
+        <iframe src="plots/viz/viz5_explanatory_pictogram.html" loading="lazy"
           scrolling="no" onload="resizeIframe(this)"></iframe>
       </div>
     </article>
@@ -369,7 +362,7 @@
         <div class="bd-row-cite">UNHCR · 2010–2022</div>
       </aside>
       <div class="bd-row-chart">
-        <iframe src="plots/viz6_creative_trajectory.html" loading="lazy"
+        <iframe src="plots/viz/viz6_creative_trajectory.html" loading="lazy"
           scrolling="no" onload="resizeIframe(this)"></iframe>
       </div>
     </article>
@@ -423,7 +416,7 @@
         <p class="bd-twoup-p">Full axes, regional colour, confidence intervals, methodological caveats.</p>
       </div>
       <div class="bd-row-chart white">
-        <iframe src="plots/viz7_white_hat.html" loading="lazy"
+        <iframe src="plots/viz/viz7_white_hat.html" loading="lazy"
           scrolling="no" onload="resizeIframe(this)"></iframe>
       </div>
     </article>
@@ -434,7 +427,7 @@
         <p class="bd-twoup-p">Truncated axis, cherry-picked years, causal framing, no uncertainty shown.</p>
       </div>
       <div class="bd-row-chart black">
-        <iframe src="plots/viz8_black_hat.html" loading="lazy"
+        <iframe src="plots/viz/viz8_black_hat.html" loading="lazy"
           scrolling="no" onload="resizeIframe(this)"></iframe>
       </div>
     </article>

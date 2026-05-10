@@ -403,8 +403,10 @@ a:hover{color:var(--red-deep)}
 }
 .bd-row-chart iframe{
   width:100%;display:block;border:0;background:#fff;
+  min-height:420px;
 }
 .bd-row-chart.is-tableau iframe{background:#fff}
+.bd-row-chart.is-tableau{min-height:560px}
 
 /* ════════════════ Pull quote band ════════════════ */
 .bd-quote{
@@ -455,6 +457,11 @@ a:hover{color:var(--red-deep)}
 .bd-twoup-caption{margin-bottom:18px}
 .bd-twoup-caption .bd-row-tag.white{color:var(--green);border-color:rgba(59,110,74,.4)}
 .bd-twoup-caption .bd-row-tag.black{color:var(--red);border-color:rgba(193,39,45,.4)}
+.bd-twoup-h3{
+  font-family:'Source Serif 4',serif;font-size:24px;font-weight:700;
+  margin:8px 0 8px;color:var(--ink);letter-spacing:-.012em;line-height:1.2;
+}
+.bd-twoup-p{font-size:15px;color:var(--ink-soft);margin:0;line-height:1.5}
 
 /* ════════════════ ACTION BAND ════════════════ */
 .bd-action{
